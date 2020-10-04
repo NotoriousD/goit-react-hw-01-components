@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import faker from "faker";
 import "./Profile.scss";
 
-export const Profile = ({ name, tag, location, avatar, stats }) => {
+const Profile = ({ name, tag, location, avatar, stats }) => {
   return (
     <div className="profile">
       <div className="description">
@@ -32,3 +32,5 @@ Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
 };
+
+export default { Profile };

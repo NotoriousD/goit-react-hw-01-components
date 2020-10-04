@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FriendListItem } from "../FriendListItem/FriendListItem";
+import { FriendListItem } from "../FriendListItem";
 import "./FriendList.scss";
 
-export const FriendList = ({ friends }) => {
+const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
       {friends.map((friend) => (
@@ -16,3 +16,4 @@ export const FriendList = ({ friends }) => {
 FriendList.propTypes = {
   friends: PropTypes.array.isRequired,
 };
+export default { FriendList };

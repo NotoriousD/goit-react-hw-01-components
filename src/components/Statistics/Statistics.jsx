@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import faker from "faker";
 import "./Statistics.scss";
 
-export const Statistics = ({ title, stats }) => {
+const Statistics = ({ title, stats }) => {
   return (
     <section className="statistics">
       {title ? <h2 className="title">{title}</h2> : null}
@@ -33,5 +33,13 @@ export const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
+
+export default { Statistics };

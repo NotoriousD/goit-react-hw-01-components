@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./TransactionHistory.scss";
 
-export const TransactionHistory = ({ transactions }) => {
+const TransactionHistory = ({ transactions }) => {
   return (
     <table className="transaction-history">
       <thead>
@@ -29,3 +29,5 @@ export const TransactionHistory = ({ transactions }) => {
 TransactionHistory.propTypes = {
   transactions: PropTypes.array.isRequired,
 };
+
+export default { TransactionHistory };
